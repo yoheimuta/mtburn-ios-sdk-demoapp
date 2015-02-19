@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		050AEB241908AE480079FDAB /* ADVSSmartAppWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050AEB231908AE480079FDAB /* ADVSSmartAppWebViewController.m */; };
+		050AEB2E1908AF4B0079FDAB /* ADCubeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 050AEB271908AF4B0079FDAB /* ADCubeTransition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		050AEB2F1908AF4B0079FDAB /* ADTransformTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 050AEB291908AF4B0079FDAB /* ADTransformTransition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		050AEB301908AF4B0079FDAB /* ADTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 050AEB2B1908AF4B0079FDAB /* ADTransition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		050AEB311908AF4B0079FDAB /* ADTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 050AEB2D1908AF4B0079FDAB /* ADTransitioningDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0548FA6B1A96A40D0085807F /* ADVSError.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0548FA6A1A96A40D0085807F /* ADVSError.strings */; };
+		05B4A8D519613B8D00CA4670 /* appdavis.png in Resources */ = {isa = PBXBuildFile; fileRef = 05B4A8D419613B8D00CA4670 /* appdavis.png */; };
+		05CAC80519BD7B2800FB8AE1 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CAC80219BD7B2800FB8AE1 /* icon1.png */; };
+		05CAC80619BD7B2800FB8AE1 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CAC80319BD7B2800FB8AE1 /* icon2.png */; };
+		05CAC80719BD7B2800FB8AE1 /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CAC80419BD7B2800FB8AE1 /* icon3.png */; };
+		05D1EEDF19F0EBB2003B032D /* ADVSInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D1EEDE19F0EBB2003B032D /* ADVSInterstitialViewController.m */; };
+		05E99B9D192CB53F00EF9818 /* ADVSInstreamAppTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E99B9B192CB53F00EF9818 /* ADVSInstreamAppTableViewController.m */; };
+		05E99BA0192CB8BB00EF9818 /* ADVSInstreamAppArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E99B9F192CB8BB00EF9818 /* ADVSInstreamAppArticleTableViewCell.xib */; };
+		05E99BA3192CB9D900EF9818 /* ADVSInstreamAppArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E99BA2192CB9D900EF9818 /* ADVSInstreamAppArticleTableViewCell.m */; };
+		05E99BAC192DF2D100EF9818 /* ViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E99BAB192DF2D100EF9818 /* ViewPagerController.m */; };
+		05E99BAF192DF2DC00EF9818 /* ADVSInstreamAppPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E99BAE192DF2DC00EF9818 /* ADVSInstreamAppPageController.m */; };
+		05E99BB3192DF2E700EF9818 /* ADVSInstreamAppPageTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E99BB1192DF2E700EF9818 /* ADVSInstreamAppPageTabView.m */; };
+		05E99BB4192DF2E700EF9818 /* ADVSInstreamAppPageTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E99BB2192DF2E700EF9818 /* ADVSInstreamAppPageTabView.xib */; };
+		05F15B67193406D800651C87 /* MNMBottomPullToRefresh.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05F15B60193406D800651C87 /* MNMBottomPullToRefresh.strings */; };
+		05F15B68193406D800651C87 /* MNMBottomPullToRefreshArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F15B61193406D800651C87 /* MNMBottomPullToRefreshArrow.png */; };
+		05F15B69193406D800651C87 /* MNMBottomPullToRefreshArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F15B62193406D800651C87 /* MNMBottomPullToRefreshArrow@2x.png */; };
+		05F15B6A193406D800651C87 /* MNMBottomPullToRefreshManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F15B64193406D800651C87 /* MNMBottomPullToRefreshManager.m */; };
+		05F15B6B193406D800651C87 /* MNMBottomPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F15B66193406D800651C87 /* MNMBottomPullToRefreshView.m */; };
+		05F7192D19040C5C00F3A046 /* ADVSSmartAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F7191A19040C5C00F3A046 /* ADVSSmartAppViewController.m */; };
+		05F7192E19040C5C00F3A046 /* ADVSSmartAppTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05F7191B19040C5C00F3A046 /* ADVSSmartAppTableViewHeader.xib */; };
+		05F7192F19040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F7191D19040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.m */; };
+		05F7193019040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05F7191E19040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.xib */; };
+		05F7193119040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F7192019040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.m */; };
+		05F7193219040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05F7192119040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.xib */; };
+		05F7193319040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F7192319040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.m */; };
+		05F7193419040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05F7192419040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.xib */; };
+		05F7193519040C5C00F3A046 /* ADVSSmartAppArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F7192619040C5C00F3A046 /* ADVSSmartAppArticleModel.m */; };
+		05F7193619040C5C00F3A046 /* ADVSSmartAppColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F7192819040C5C00F3A046 /* ADVSSmartAppColorPalette.m */; };
+		05F7193719040C5C00F3A046 /* ADVSSmartAppScrollFeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F7192A19040C5C00F3A046 /* ADVSSmartAppScrollFeedView.m */; };
+		05F7193819040C5C00F3A046 /* ADVSSmartAppPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F7192C19040C5C00F3A046 /* ADVSSmartAppPageViewController.m */; };
+		05F7193B1904257800F3A046 /* ADVSSmartAppRssModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F7193A1904257800F3A046 /* ADVSSmartAppRssModelManager.m */; };
+		05F7193D19042C2C00F3A046 /* weather.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F7193C19042C2C00F3A046 /* weather.png */; };
+		771AC06E18BAE92500821834 /* AppDavis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771AC06D18BAE92500821834 /* AppDavis.framework */; };
+		77F1946A18A9BBF200A5F72E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F1946918A9BBF200A5F72E /* Foundation.framework */; };
+		77F1946C18A9BBF200A5F72E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F1946B18A9BBF200A5F72E /* CoreGraphics.framework */; };
+		77F1946E18A9BBF200A5F72E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F1946D18A9BBF200A5F72E /* UIKit.framework */; };
+		77F1947418A9BBF200A5F72E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77F1947218A9BBF200A5F72E /* InfoPlist.strings */; };
+		77F1947618A9BBF200A5F72E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F1947518A9BBF200A5F72E /* main.m */; };
+		77F1947A18A9BBF200A5F72E /* ADVSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F1947918A9BBF200A5F72E /* ADVSAppDelegate.m */; };
+		77F1947D18A9BBF200A5F72E /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F1947B18A9BBF200A5F72E /* Main_iPhone.storyboard */; };
+		77F1948018A9BBF200A5F72E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F1947E18A9BBF200A5F72E /* Main_iPad.storyboard */; };
+		77F1948318A9BBF200A5F72E /* ADVSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F1948218A9BBF200A5F72E /* ADVSViewController.m */; };
+		77F1948518A9BBF200A5F72E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F1948418A9BBF200A5F72E /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		050AEB221908AE480079FDAB /* ADVSSmartAppWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ADVSSmartAppWebViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		050AEB231908AE480079FDAB /* ADVSSmartAppWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ADVSSmartAppWebViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		050AEB261908AF4B0079FDAB /* ADCubeTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCubeTransition.h; sourceTree = "<group>"; };
+		050AEB271908AF4B0079FDAB /* ADCubeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADCubeTransition.m; sourceTree = "<group>"; };
+		050AEB281908AF4B0079FDAB /* ADTransformTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTransformTransition.h; sourceTree = "<group>"; };
+		050AEB291908AF4B0079FDAB /* ADTransformTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTransformTransition.m; sourceTree = "<group>"; };
+		050AEB2A1908AF4B0079FDAB /* ADTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTransition.h; sourceTree = "<group>"; };
+		050AEB2B1908AF4B0079FDAB /* ADTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTransition.m; sourceTree = "<group>"; };
+		050AEB2C1908AF4B0079FDAB /* ADTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTransitioningDelegate.h; sourceTree = "<group>"; };
+		050AEB2D1908AF4B0079FDAB /* ADTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTransitioningDelegate.m; sourceTree = "<group>"; };
+		0548FA6A1A96A40D0085807F /* ADVSError.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = ADVSError.strings; sourceTree = "<group>"; };
+		05B4A8D419613B8D00CA4670 /* appdavis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdavis.png; sourceTree = "<group>"; };
+		05CAC80219BD7B2800FB8AE1 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		05CAC80319BD7B2800FB8AE1 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		05CAC80419BD7B2800FB8AE1 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
+		05D1EEDD19F0EBB2003B032D /* ADVSInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVSInterstitialViewController.h; sourceTree = "<group>"; };
+		05D1EEDE19F0EBB2003B032D /* ADVSInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVSInterstitialViewController.m; sourceTree = "<group>"; };
+		05E99B9A192CB53F00EF9818 /* ADVSInstreamAppTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ADVSInstreamAppTableViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05E99B9B192CB53F00EF9818 /* ADVSInstreamAppTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ADVSInstreamAppTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05E99B9F192CB8BB00EF9818 /* ADVSInstreamAppArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADVSInstreamAppArticleTableViewCell.xib; sourceTree = "<group>"; };
+		05E99BA1192CB9D900EF9818 /* ADVSInstreamAppArticleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVSInstreamAppArticleTableViewCell.h; sourceTree = "<group>"; };
+		05E99BA2192CB9D900EF9818 /* ADVSInstreamAppArticleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVSInstreamAppArticleTableViewCell.m; sourceTree = "<group>"; };
+		05E99BAA192DF2D100EF9818 /* ViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPagerController.h; sourceTree = "<group>"; };
+		05E99BAB192DF2D100EF9818 /* ViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPagerController.m; sourceTree = "<group>"; };
+		05E99BAD192DF2DC00EF9818 /* ADVSInstreamAppPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVSInstreamAppPageController.h; sourceTree = "<group>"; };
+		05E99BAE192DF2DC00EF9818 /* ADVSInstreamAppPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVSInstreamAppPageController.m; sourceTree = "<group>"; };
+		05E99BB0192DF2E700EF9818 /* ADVSInstreamAppPageTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVSInstreamAppPageTabView.h; sourceTree = "<group>"; };
+		05E99BB1192DF2E700EF9818 /* ADVSInstreamAppPageTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVSInstreamAppPageTabView.m; sourceTree = "<group>"; };
+		05E99BB2192DF2E700EF9818 /* ADVSInstreamAppPageTabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADVSInstreamAppPageTabView.xib; sourceTree = "<group>"; };
+		05F15B60193406D800651C87 /* MNMBottomPullToRefresh.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = MNMBottomPullToRefresh.strings; sourceTree = "<group>"; };
+		05F15B61193406D800651C87 /* MNMBottomPullToRefreshArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MNMBottomPullToRefreshArrow.png; sourceTree = "<group>"; };
+		05F15B62193406D800651C87 /* MNMBottomPullToRefreshArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MNMBottomPullToRefreshArrow@2x.png"; sourceTree = "<group>"; };
+		05F15B63193406D800651C87 /* MNMBottomPullToRefreshManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNMBottomPullToRefreshManager.h; sourceTree = "<group>"; };
+		05F15B64193406D800651C87 /* MNMBottomPullToRefreshManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNMBottomPullToRefreshManager.m; sourceTree = "<group>"; };
+		05F15B65193406D800651C87 /* MNMBottomPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNMBottomPullToRefreshView.h; sourceTree = "<group>"; };
+		05F15B66193406D800651C87 /* MNMBottomPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNMBottomPullToRefreshView.m; sourceTree = "<group>"; };
+		05F7191919040C5C00F3A046 /* ADVSSmartAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ADVSSmartAppViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05F7191A19040C5C00F3A046 /* ADVSSmartAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ADVSSmartAppViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F7191B19040C5C00F3A046 /* ADVSSmartAppTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADVSSmartAppTableViewHeader.xib; sourceTree = "<group>"; };
+		05F7191C19040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ADVSSmartAppArticle1x1TableViewCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05F7191D19040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ADVSSmartAppArticle1x1TableViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F7191E19040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADVSSmartAppArticle1x1TableViewCell.xib; sourceTree = "<group>"; };
+		05F7191F19040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVSSmartAppArticle1x3TableViewCell.h; sourceTree = "<group>"; };
+		05F7192019040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ADVSSmartAppArticle1x3TableViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F7192119040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADVSSmartAppArticle1x3TableViewCell.xib; sourceTree = "<group>"; };
+		05F7192219040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ADVSSmartAppArticle3x1TableViewCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05F7192319040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ADVSSmartAppArticle3x1TableViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F7192419040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADVSSmartAppArticle3x1TableViewCell.xib; sourceTree = "<group>"; };
+		05F7192519040C5C00F3A046 /* ADVSSmartAppArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ADVSSmartAppArticleModel.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05F7192619040C5C00F3A046 /* ADVSSmartAppArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ADVSSmartAppArticleModel.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F7192719040C5C00F3A046 /* ADVSSmartAppColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ADVSSmartAppColorPalette.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05F7192819040C5C00F3A046 /* ADVSSmartAppColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ADVSSmartAppColorPalette.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F7192919040C5C00F3A046 /* ADVSSmartAppScrollFeedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ADVSSmartAppScrollFeedView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05F7192A19040C5C00F3A046 /* ADVSSmartAppScrollFeedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ADVSSmartAppScrollFeedView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F7192B19040C5C00F3A046 /* ADVSSmartAppPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ADVSSmartAppPageViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05F7192C19040C5C00F3A046 /* ADVSSmartAppPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ADVSSmartAppPageViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F719391904257800F3A046 /* ADVSSmartAppRssModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ADVSSmartAppRssModelManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05F7193A1904257800F3A046 /* ADVSSmartAppRssModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ADVSSmartAppRssModelManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F7193C19042C2C00F3A046 /* weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather.png; sourceTree = "<group>"; };
+		771AC06D18BAE92500821834 /* AppDavis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppDavis.framework; sourceTree = "<group>"; };
+		77F1946618A9BBF200A5F72E /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77F1946918A9BBF200A5F72E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		77F1946B18A9BBF200A5F72E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		77F1946D18A9BBF200A5F72E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		77F1947118A9BBF200A5F72E /* DemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoApp-Info.plist"; sourceTree = "<group>"; };
+		77F1947318A9BBF200A5F72E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		77F1947518A9BBF200A5F72E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		77F1947718A9BBF200A5F72E /* DemoApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoApp-Prefix.pch"; sourceTree = "<group>"; };
+		77F1947818A9BBF200A5F72E /* ADVSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADVSAppDelegate.h; sourceTree = "<group>"; };
+		77F1947918A9BBF200A5F72E /* ADVSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADVSAppDelegate.m; sourceTree = "<group>"; };
+		77F1947C18A9BBF200A5F72E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		77F1947F18A9BBF200A5F72E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		77F1948118A9BBF200A5F72E /* ADVSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADVSViewController.h; sourceTree = "<group>"; };
+		77F1948218A9BBF200A5F72E /* ADVSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADVSViewController.m; sourceTree = "<group>"; };
+		77F1948418A9BBF200A5F72E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		77F1948B18A9BBF200A5F72E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77F1946318A9BBF200A5F72E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77F1946C18A9BBF200A5F72E /* CoreGraphics.framework in Frameworks */,
+				77F1946E18A9BBF200A5F72E /* UIKit.framework in Frameworks */,
+				771AC06E18BAE92500821834 /* AppDavis.framework in Frameworks */,
+				77F1946A18A9BBF200A5F72E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		050AEB251908AF4B0079FDAB /* ADTransitionController */ = {
+			isa = PBXGroup;
+			children = (
+				050AEB261908AF4B0079FDAB /* ADCubeTransition.h */,
+				050AEB271908AF4B0079FDAB /* ADCubeTransition.m */,
+				050AEB281908AF4B0079FDAB /* ADTransformTransition.h */,
+				050AEB291908AF4B0079FDAB /* ADTransformTransition.m */,
+				050AEB2A1908AF4B0079FDAB /* ADTransition.h */,
+				050AEB2B1908AF4B0079FDAB /* ADTransition.m */,
+				050AEB2C1908AF4B0079FDAB /* ADTransitioningDelegate.h */,
+				050AEB2D1908AF4B0079FDAB /* ADTransitioningDelegate.m */,
+			);
+			path = ADTransitionController;
+			sourceTree = "<group>";
+		};
+		05E99B99192CB43200EF9818 /* CustomInstream */ = {
+			isa = PBXGroup;
+			children = (
+				05E99B9A192CB53F00EF9818 /* ADVSInstreamAppTableViewController.h */,
+				05E99B9B192CB53F00EF9818 /* ADVSInstreamAppTableViewController.m */,
+				05E99BA1192CB9D900EF9818 /* ADVSInstreamAppArticleTableViewCell.h */,
+				05E99BA2192CB9D900EF9818 /* ADVSInstreamAppArticleTableViewCell.m */,
+				05E99B9F192CB8BB00EF9818 /* ADVSInstreamAppArticleTableViewCell.xib */,
+				05E99BAA192DF2D100EF9818 /* ViewPagerController.h */,
+				05E99BAB192DF2D100EF9818 /* ViewPagerController.m */,
+				05E99BAD192DF2DC00EF9818 /* ADVSInstreamAppPageController.h */,
+				05E99BAE192DF2DC00EF9818 /* ADVSInstreamAppPageController.m */,
+				05E99BB0192DF2E700EF9818 /* ADVSInstreamAppPageTabView.h */,
+				05E99BB1192DF2E700EF9818 /* ADVSInstreamAppPageTabView.m */,
+				05E99BB2192DF2E700EF9818 /* ADVSInstreamAppPageTabView.xib */,
+			);
+			path = CustomInstream;
+			sourceTree = "<group>";
+		};
+		05F15B5F193406D800651C87 /* MNMBottomPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				05F15B60193406D800651C87 /* MNMBottomPullToRefresh.strings */,
+				05F15B61193406D800651C87 /* MNMBottomPullToRefreshArrow.png */,
+				05F15B62193406D800651C87 /* MNMBottomPullToRefreshArrow@2x.png */,
+				05F15B63193406D800651C87 /* MNMBottomPullToRefreshManager.h */,
+				05F15B64193406D800651C87 /* MNMBottomPullToRefreshManager.m */,
+				05F15B65193406D800651C87 /* MNMBottomPullToRefreshView.h */,
+				05F15B66193406D800651C87 /* MNMBottomPullToRefreshView.m */,
+			);
+			name = MNMBottomPullToRefresh;
+			path = ../MNMBottomPullToRefresh;
+			sourceTree = "<group>";
+		};
+		05F7191819040C5C00F3A046 /* Instream */ = {
+			isa = PBXGroup;
+			children = (
+				05F7191919040C5C00F3A046 /* ADVSSmartAppViewController.h */,
+				05F7191A19040C5C00F3A046 /* ADVSSmartAppViewController.m */,
+				05F7191B19040C5C00F3A046 /* ADVSSmartAppTableViewHeader.xib */,
+				05F7191C19040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.h */,
+				05F7191D19040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.m */,
+				05F7191E19040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.xib */,
+				05F7191F19040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.h */,
+				05F7192019040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.m */,
+				05F7192119040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.xib */,
+				05F7192219040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.h */,
+				05F7192319040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.m */,
+				05F7192419040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.xib */,
+				05F7192519040C5C00F3A046 /* ADVSSmartAppArticleModel.h */,
+				05F7192619040C5C00F3A046 /* ADVSSmartAppArticleModel.m */,
+				05F7192719040C5C00F3A046 /* ADVSSmartAppColorPalette.h */,
+				05F7192819040C5C00F3A046 /* ADVSSmartAppColorPalette.m */,
+				05F7192919040C5C00F3A046 /* ADVSSmartAppScrollFeedView.h */,
+				05F7192A19040C5C00F3A046 /* ADVSSmartAppScrollFeedView.m */,
+				05F7192B19040C5C00F3A046 /* ADVSSmartAppPageViewController.h */,
+				05F7192C19040C5C00F3A046 /* ADVSSmartAppPageViewController.m */,
+				05F719391904257800F3A046 /* ADVSSmartAppRssModelManager.h */,
+				05F7193A1904257800F3A046 /* ADVSSmartAppRssModelManager.m */,
+				050AEB221908AE480079FDAB /* ADVSSmartAppWebViewController.h */,
+				050AEB231908AE480079FDAB /* ADVSSmartAppWebViewController.m */,
+				05F15B5F193406D800651C87 /* MNMBottomPullToRefresh */,
+				050AEB251908AF4B0079FDAB /* ADTransitionController */,
+			);
+			path = Instream;
+			sourceTree = "<group>";
+		};
+		77F1945D18A9BBF200A5F72E = {
+			isa = PBXGroup;
+			children = (
+				77F1946F18A9BBF200A5F72E /* DemoApp */,
+				77F1946818A9BBF200A5F72E /* Frameworks */,
+				77F1946718A9BBF200A5F72E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77F1946718A9BBF200A5F72E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77F1946618A9BBF200A5F72E /* DemoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77F1946818A9BBF200A5F72E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				771AC06D18BAE92500821834 /* AppDavis.framework */,
+				77F1946918A9BBF200A5F72E /* Foundation.framework */,
+				77F1946B18A9BBF200A5F72E /* CoreGraphics.framework */,
+				77F1946D18A9BBF200A5F72E /* UIKit.framework */,
+				77F1948B18A9BBF200A5F72E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77F1946F18A9BBF200A5F72E /* DemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				77F1947818A9BBF200A5F72E /* ADVSAppDelegate.h */,
+				77F1947918A9BBF200A5F72E /* ADVSAppDelegate.m */,
+				77F1947B18A9BBF200A5F72E /* Main_iPhone.storyboard */,
+				77F1947E18A9BBF200A5F72E /* Main_iPad.storyboard */,
+				77F1948118A9BBF200A5F72E /* ADVSViewController.h */,
+				77F1948218A9BBF200A5F72E /* ADVSViewController.m */,
+				05D1EEDD19F0EBB2003B032D /* ADVSInterstitialViewController.h */,
+				05D1EEDE19F0EBB2003B032D /* ADVSInterstitialViewController.m */,
+				05F7191819040C5C00F3A046 /* Instream */,
+				05E99B99192CB43200EF9818 /* CustomInstream */,
+				77F1948418A9BBF200A5F72E /* Images.xcassets */,
+				77F1947018A9BBF200A5F72E /* Supporting Files */,
+			);
+			path = DemoApp;
+			sourceTree = "<group>";
+		};
+		77F1947018A9BBF200A5F72E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0548FA6A1A96A40D0085807F /* ADVSError.strings */,
+				05CAC80219BD7B2800FB8AE1 /* icon1.png */,
+				05CAC80319BD7B2800FB8AE1 /* icon2.png */,
+				05CAC80419BD7B2800FB8AE1 /* icon3.png */,
+				05B4A8D419613B8D00CA4670 /* appdavis.png */,
+				05F7193C19042C2C00F3A046 /* weather.png */,
+				77F1947118A9BBF200A5F72E /* DemoApp-Info.plist */,
+				77F1947218A9BBF200A5F72E /* InfoPlist.strings */,
+				77F1947518A9BBF200A5F72E /* main.m */,
+				77F1947718A9BBF200A5F72E /* DemoApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77F1946518A9BBF200A5F72E /* DemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77F1949B18A9BBF200A5F72E /* Build configuration list for PBXNativeTarget "DemoApp" */;
+			buildPhases = (
+				77F1946218A9BBF200A5F72E /* Sources */,
+				77F1946318A9BBF200A5F72E /* Frameworks */,
+				77F1946418A9BBF200A5F72E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DemoApp;
+			productName = DemoApp;
+			productReference = 77F1946618A9BBF200A5F72E /* DemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77F1945E18A9BBF200A5F72E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MTB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = MTBurn;
+				TargetAttributes = {
+					77F1946518A9BBF200A5F72E = {
+						DevelopmentTeam = 756ZU4K23D;
+					};
+				};
+			};
+			buildConfigurationList = 77F1946118A9BBF200A5F72E /* Build configuration list for PBXProject "DemoApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77F1945D18A9BBF200A5F72E;
+			productRefGroup = 77F1946718A9BBF200A5F72E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77F1946518A9BBF200A5F72E /* DemoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77F1946418A9BBF200A5F72E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E99BB4192DF2E700EF9818 /* ADVSInstreamAppPageTabView.xib in Resources */,
+				05F15B67193406D800651C87 /* MNMBottomPullToRefresh.strings in Resources */,
+				05E99BA0192CB8BB00EF9818 /* ADVSInstreamAppArticleTableViewCell.xib in Resources */,
+				77F1948018A9BBF200A5F72E /* Main_iPad.storyboard in Resources */,
+				77F1948518A9BBF200A5F72E /* Images.xcassets in Resources */,
+				05F15B69193406D800651C87 /* MNMBottomPullToRefreshArrow@2x.png in Resources */,
+				0548FA6B1A96A40D0085807F /* ADVSError.strings in Resources */,
+				05B4A8D519613B8D00CA4670 /* appdavis.png in Resources */,
+				05CAC80519BD7B2800FB8AE1 /* icon1.png in Resources */,
+				05F7193019040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.xib in Resources */,
+				77F1947D18A9BBF200A5F72E /* Main_iPhone.storyboard in Resources */,
+				05F7193419040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.xib in Resources */,
+				05CAC80719BD7B2800FB8AE1 /* icon3.png in Resources */,
+				77F1947418A9BBF200A5F72E /* InfoPlist.strings in Resources */,
+				05F7193219040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.xib in Resources */,
+				05F7193D19042C2C00F3A046 /* weather.png in Resources */,
+				05F7192E19040C5C00F3A046 /* ADVSSmartAppTableViewHeader.xib in Resources */,
+				05F15B68193406D800651C87 /* MNMBottomPullToRefreshArrow.png in Resources */,
+				05CAC80619BD7B2800FB8AE1 /* icon2.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77F1946218A9BBF200A5F72E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F7193319040C5C00F3A046 /* ADVSSmartAppArticle3x1TableViewCell.m in Sources */,
+				05F7192F19040C5C00F3A046 /* ADVSSmartAppArticle1x1TableViewCell.m in Sources */,
+				05E99BAC192DF2D100EF9818 /* ViewPagerController.m in Sources */,
+				05F7193119040C5C00F3A046 /* ADVSSmartAppArticle1x3TableViewCell.m in Sources */,
+				05F7192D19040C5C00F3A046 /* ADVSSmartAppViewController.m in Sources */,
+				050AEB2F1908AF4B0079FDAB /* ADTransformTransition.m in Sources */,
+				05F15B6B193406D800651C87 /* MNMBottomPullToRefreshView.m in Sources */,
+				77F1947A18A9BBF200A5F72E /* ADVSAppDelegate.m in Sources */,
+				77F1948318A9BBF200A5F72E /* ADVSViewController.m in Sources */,
+				050AEB241908AE480079FDAB /* ADVSSmartAppWebViewController.m in Sources */,
+				05F7193B1904257800F3A046 /* ADVSSmartAppRssModelManager.m in Sources */,
+				05F15B6A193406D800651C87 /* MNMBottomPullToRefreshManager.m in Sources */,
+				050AEB301908AF4B0079FDAB /* ADTransition.m in Sources */,
+				05E99B9D192CB53F00EF9818 /* ADVSInstreamAppTableViewController.m in Sources */,
+				05D1EEDF19F0EBB2003B032D /* ADVSInterstitialViewController.m in Sources */,
+				05F7193519040C5C00F3A046 /* ADVSSmartAppArticleModel.m in Sources */,
+				05E99BB3192DF2E700EF9818 /* ADVSInstreamAppPageTabView.m in Sources */,
+				05E99BA3192CB9D900EF9818 /* ADVSInstreamAppArticleTableViewCell.m in Sources */,
+				05E99BAF192DF2DC00EF9818 /* ADVSInstreamAppPageController.m in Sources */,
+				05F7193819040C5C00F3A046 /* ADVSSmartAppPageViewController.m in Sources */,
+				05F7193719040C5C00F3A046 /* ADVSSmartAppScrollFeedView.m in Sources */,
+				77F1947618A9BBF200A5F72E /* main.m in Sources */,
+				050AEB2E1908AF4B0079FDAB /* ADCubeTransition.m in Sources */,
+				05F7193619040C5C00F3A046 /* ADVSSmartAppColorPalette.m in Sources */,
+				050AEB311908AF4B0079FDAB /* ADTransitioningDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		77F1947218A9BBF200A5F72E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77F1947318A9BBF200A5F72E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		77F1947B18A9BBF200A5F72E /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77F1947C18A9BBF200A5F72E /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		77F1947E18A9BBF200A5F72E /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77F1947F18A9BBF200A5F72E /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77F1949918A9BBF200A5F72E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(BUILT_PRODUCTS_DIR)/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "C9CFC67B-608B-4A2D-A902-B52EA2B2B79C";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77F1949A18A9BBF200A5F72E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(BUILT_PRODUCTS_DIR)/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "C9CFC67B-608B-4A2D-A902-B52EA2B2B79C";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77F1949C18A9BBF200A5F72E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoApp/DemoApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = "DemoApp/DemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		77F1949D18A9BBF200A5F72E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoApp/DemoApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = "DemoApp/DemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77F1946118A9BBF200A5F72E /* Build configuration list for PBXProject "DemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77F1949918A9BBF200A5F72E /* Debug */,
+				77F1949A18A9BBF200A5F72E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77F1949B18A9BBF200A5F72E /* Build configuration list for PBXNativeTarget "DemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77F1949C18A9BBF200A5F72E /* Debug */,
+				77F1949D18A9BBF200A5F72E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77F1945E18A9BBF200A5F72E /* Project object */;
+}
