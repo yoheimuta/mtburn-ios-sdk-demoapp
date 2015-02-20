@@ -15,4 +15,4 @@ test:
 
 send-coverage:
 	coveralls \
-		-e UnitTests
+		-r ./ -E ".*/UnitTests/.*"
