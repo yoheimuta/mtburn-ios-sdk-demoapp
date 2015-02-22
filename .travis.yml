@@ -12,14 +12,14 @@ install:
 
 script:
   - make test
-  - '[ "$TRAVIS_BRANCH" == "master" ] && make ipa || echo "Testing on a branch other than master. Do nothing"'
+  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && make ipa || echo "Do nothing"'
 
 after_success:
   - make send-coverage
-  - '[ "$TRAVIS_BRANCH" == "master" ] && make deploygate || echo "Testing on a branch other than master. Do nothing"'
+  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && make deploygate || echo "Do nothing"'
 
 after_script:
-  - '[ "$TRAVIS_BRANCH" == "master" ] && make remove-certificates || echo "Testing on a branch other than master. Do nothing"'
+  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && make remove-certificates || echo "Do nothing"'
 
 notifications:
   slack:
