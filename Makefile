@@ -21,19 +21,19 @@ test:
 		GCC_GENERATE_TEST_COVERAGE_FILES=YES
 
 certificates-download:
-	bundle exec ios certificates:download "yoshimuta yohei" \
+	@bundle exec ios certificates:download "yoshimuta yohei" \
 		--type distribution \
 		-u yoheimuta \
 		-p $(IOS_PASSWORD)
 
 profiles-download:
-	bundle exec ios profiles:download \
+	@bundle exec ios profiles:download \
 		-u yoheimuta \
 		-p $(IOS_PASSWORD) \
 		"iOS Team Provisioning Profile: *"
 
 decrypt-p12:
-	openssl aes-256-cbc \
+	@openssl aes-256-cbc \
 		-k $(DECORD_CERTS) \
 		-in ./.travis/dist.p12.enc -d -a -out ./.travis/dist.p12
 
@@ -45,7 +45,7 @@ create-keychain:
 
 add-certificates: certificates-download profiles-download decrypt-p12 create-keychain
 	security import ./.travis/AppleWWDRCA.cer -k $(SECURITY_KEYCHAIN_PATH) -T $(SECURITY_APP_PATH)
-	security import ./.travis/dist.p12 -k $(SECURITY_KEYCHAIN_PATH) -P $(DECORD_CERTS) -T $(SECURITY_APP_PATH)
+	@security import ./.travis/dist.p12 -k $(SECURITY_KEYCHAIN_PATH) -P $(DECORD_CERTS) -T $(SECURITY_APP_PATH)
 	security import ./$(MTB_CERTIFICATE) -k $(SECURITY_KEYCHAIN_PATH) -T $(SECURITY_APP_PATH)
 	mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 	cp $(MTB_PROFILE) ~/Library/MobileDevice/Provisioning\ Profiles/
@@ -60,11 +60,10 @@ ipa: add-certificates
 		--configuration Release \
 		--sdk iphoneos \
 		--project $(MTB_PROJECT) \
-		--scheme $(MTB_SCHEME) \
-		--verbose
+		--scheme $(MTB_SCHEME)
 
 deploygate:
-	bundle exec ipa distribute:deploygate \
+	@bundle exec ipa distribute:deploygate \
 		-a $(DEPLOYGATE_API_KEY) \
 		-u yoheimuta \
 		-f DemoApp.ipa \
