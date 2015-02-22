@@ -16,10 +16,24 @@ script:
 
 after_success:
   - make send-coverage
-  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && make deploygate || echo "Do nothing"'
 
 after_script:
   - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && make remove-certificates || echo "Do nothing"'
+
+before_deploy:
+  - echo TRAVIS_TAG=${TRAVIS_TAG}
+  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_TAG" ] && make deploygate || echo "Do nothing"'
+
+deploy:
+  provider: releases
+  api_key:
+    secure: gvj2V09zMPsHDPhNoQCpP4ouMUqq7mdq7g2l79dRSTOqGh/diJpgRWKCOZdZ5hYibpe0ynDckixS3ZLyPGhsvx7qfCxNcWDpdmtZtSSv7yuoc3PEbV56QtFfaoCCJacHWohKjRd2+hymDs6bxfPQ3WjnaMAbA48CdEY3QQEftpg=
+  file: DemoApp.ipa
+  skip_cleanup: true
+  on:
+    repo: yoheimuta/mtburn-ios-sdk-demoapp
+    tags: true
+    all_branches: true  # https://github.com/travis-ci/travis-ci/issues/1675
 
 notifications:
   slack:
@@ -31,3 +45,4 @@ env:
     - secure: fArJhMTQ9NcJb6+t2YsloRxFQdtF5rxLI1WVlt4ffvFTNAokg19IVov5HZP1i4/THexEWqzhwaAV8X+XZyHc9pqNUutbmeDMChih4m/hbUAy2N0HfQH0yVg3UZMEHzhOmVUBXf36GCnZkmVu6ggTc2TIs5cemRZrkwvK2/JPY+Y=
     - secure: R2hDwuXaoNNjlJHxtT8DglIjbXR8TSe6XC2tnzlGy9+hLWTXNxK9G4jp2h8sdwBS5grar8w88zyvLEcAXx8a6i6aaYK5JzAYpF5vh1/56ctwCWPx10wrh3jQkkLvJutDDhTaRzcjELOJjF2qdpuqeKYf8CMjUYgIY5bxbjfZj8c=
     - secure: SdVhwFZ0v1ucWO2/rfnJQIuQK7EM++uXMUs1DLW5WEzd5C9kkNiA84D9L/919omfFSXK3Ea4bAp9O1fRdsy9fXVkQ/ypxLXf5Db57eSmtoIlzo8+RlopRP7etcauXn6Lq9M8yjnA399W65v0jYcfeG4GbPnzQLgBWLy/7+k0OsI=
+

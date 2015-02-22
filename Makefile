@@ -10,6 +10,17 @@ SECURITY_KEYCHAIN=ios-build.keychain
 SECURITY_KEYCHAIN_PATH=~/Library/Keychains/ios-build.keychain
 SECURITY_APP_PATH=/usr/bin/codesign
 
+release:
+	if [ -z "$(CURRENT_VERSION)" ] ; then exit 1; fi
+	if [ -z "$(NEXT_VERSION)" ] ; then exit 1; fi
+	git checkout master
+	sed -i '' -e"s/$(CURRENT_VERSION)/$(NEXT_VERSION)/g" \
+		DemoApp/DemoApp-Info.plist
+	git add .
+	git commit -m"Updated version to v$(NEXT_VERSION)"
+	git tag -a v$(NEXT_VERSION) -m"Updated version to v$(NEXT_VERSION)"
+	git push --tags origin master
+
 test:
 	xcodebuild clean test \
 		-sdk iphonesimulator \
