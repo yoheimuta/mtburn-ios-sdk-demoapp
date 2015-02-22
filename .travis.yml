@@ -3,8 +3,31 @@ language: objective-c
 before_install:
   - sudo easy_install cpp-coveralls
 
+cache:
+  directories:
+    - vendor/bundle
+
+install:
+  - bundle install --deployment
+
 script:
   - make test
+  - '[ "$TRAVIS_BRANCH" == "master" ] && make ipa || echo "Testing on a branch other than master. Do nothing"'
 
 after_success:
   - make send-coverage
+  - '[ "$TRAVIS_BRANCH" == "master" ] && make deploygate || echo "Testing on a branch other than master. Do nothing"'
+
+after_script:
+  - '[ "$TRAVIS_BRANCH" == "master" ] && make remove-certificates || echo "Testing on a branch other than master. Do nothing"'
+
+notifications:
+  slack:
+    rooms:
+      - greatmuta:NoziZIr4ddvZYSQUuDplKQma
+
+env:
+  global:
+    - secure: fArJhMTQ9NcJb6+t2YsloRxFQdtF5rxLI1WVlt4ffvFTNAokg19IVov5HZP1i4/THexEWqzhwaAV8X+XZyHc9pqNUutbmeDMChih4m/hbUAy2N0HfQH0yVg3UZMEHzhOmVUBXf36GCnZkmVu6ggTc2TIs5cemRZrkwvK2/JPY+Y=
+    - secure: R2hDwuXaoNNjlJHxtT8DglIjbXR8TSe6XC2tnzlGy9+hLWTXNxK9G4jp2h8sdwBS5grar8w88zyvLEcAXx8a6i6aaYK5JzAYpF5vh1/56ctwCWPx10wrh3jQkkLvJutDDhTaRzcjELOJjF2qdpuqeKYf8CMjUYgIY5bxbjfZj8c=
+    - secure: SdVhwFZ0v1ucWO2/rfnJQIuQK7EM++uXMUs1DLW5WEzd5C9kkNiA84D9L/919omfFSXK3Ea4bAp9O1fRdsy9fXVkQ/ypxLXf5Db57eSmtoIlzo8+RlopRP7etcauXn6Lq9M8yjnA399W65v0jYcfeG4GbPnzQLgBWLy/7+k0OsI=
