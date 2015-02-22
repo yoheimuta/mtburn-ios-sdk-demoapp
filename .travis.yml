@@ -8,7 +8,7 @@ cache:
     - vendor/bundle
 
 install:
-  - bundle install --path=vendor/bundle --binstubs=vendor/bin
+  - bundle install --deployment
 
 script:
   - make test
