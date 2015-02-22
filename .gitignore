@@ -18,9 +18,14 @@ profile
 DerivedData
 *.hmap
 *.xccheckout
+*.ipa
+*.app.dSYM.zip
+*.mobileprovision
 
 # CocoaPods
 Pods
 
 /DemoApp/AppDavis.framework
 /DemoApp/AppDavis.framework/*
+vender
+.bundle
