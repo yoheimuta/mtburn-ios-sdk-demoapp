@@ -17,12 +17,10 @@ script:
 after_success:
   - make send-coverage
 
-after_script:
-  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && make remove-certificates || echo "Do nothing"'
-
 before_deploy:
   - echo TRAVIS_TAG=${TRAVIS_TAG}
-  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_TAG" ] && make deploygate || echo "Do nothing"'
+  - make ipa
+  - make deploygate
 
 deploy:
   provider: releases
@@ -34,6 +32,9 @@ deploy:
     repo: yoheimuta/mtburn-ios-sdk-demoapp
     tags: true
     all_branches: true  # https://github.com/travis-ci/travis-ci/issues/1675
+
+after_script:
+  - make remove-certificates
 
 notifications:
   slack:
