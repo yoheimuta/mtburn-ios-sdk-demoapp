@@ -23,13 +23,13 @@ before_script:
 
 script:
   - make test
-  - make ipa
+  - '[ "$MTB_PR" ] && make append-pr-to-bundleid || echo "Not append -pr to bundleid"'
+  - '[ "$MTB_MASTER_NOT_TAGGED" ] && make append-master-to-bundleid || echo "Not append -master to bundleid"'
+  - '( [ "$MTB_PR" ] || [ "$MTB_MERGE_MASTER" ] ) && make ipa || echo "Skip to make ipa"'
+  - '( [ "$MTB_PR" ] || [ "$MTB_MERGE_MASTER" ] ) && make deploygate || echo "Skip to make deploygate"'
 
 after_success:
   - make send-coverage
-
-before_deploy:
-  - make deploygate
 
 deploy:
   provider: releases
