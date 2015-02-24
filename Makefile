@@ -86,6 +86,7 @@ deploygate:
 		-a $(DEPLOYGATE_API_KEY) \
 		-u yoheimuta \
 		-f DemoApp.ipa \
+		-m $(DEPLOYGATE_MESSAGE)
 
 send-coverage:
 	coveralls \
