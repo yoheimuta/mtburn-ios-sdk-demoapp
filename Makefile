@@ -73,11 +73,20 @@ ipa: add-certificates
 		--project $(MTB_PROJECT) \
 		--scheme $(MTB_SCHEME)
 
+append-pr-to-bundleid:
+	sed -i '' -e"s/rfc1034identifier)2/rfc1034identifier)2-pr/g" \
+		DemoApp/DemoApp-Info.plist
+
+append-master-to-bundleid:
+	sed -i '' -e"s/rfc1034identifier)2/rfc1034identifier)2-master/g" \
+		DemoApp/DemoApp-Info.plist
+
 deploygate:
 	@bundle exec ipa distribute:deploygate \
 		-a $(DEPLOYGATE_API_KEY) \
 		-u yoheimuta \
 		-f DemoApp.ipa \
+		-m $(DEPLOYGATE_MESSAGE)
 
 send-coverage:
 	coveralls \
