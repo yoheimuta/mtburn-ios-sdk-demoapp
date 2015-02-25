@@ -91,3 +91,10 @@ deploygate:
 send-coverage:
 	coveralls \
 		-r ./ -E ".*/UnitTests/.*"
+
+archive:
+	xcodebuild archive \
+		-sdk iphoneos \
+		-project $(MTB_PROJECT) \
+		-scheme $(MTB_SCHEME) \
+		-configuration Release \
