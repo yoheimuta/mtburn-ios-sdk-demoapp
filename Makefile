@@ -35,12 +35,14 @@ certificates-download:
 	@bundle exec ios certificates:download "yoshimuta yohei" \
 		--type distribution \
 		-u yoheimuta \
-		-p $(IOS_PASSWORD)
+		-p $(IOS_PASSWORD) \
+		--team MZK3N6HW3B
 
 profiles-download:
 	@bundle exec ios profiles:download \
 		-u yoheimuta \
 		-p $(IOS_PASSWORD) \
+		--team MZK3N6HW3B \
 		"iOS Team Provisioning Profile: *"
 
 decrypt-p12:
