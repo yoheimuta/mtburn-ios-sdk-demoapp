@@ -32,6 +32,10 @@ script:
 after_success:
   - make send-coverage
 
+before_deploy:
+  - 'NEXT_VERSION=$(echo ${TRAVIS_TAG} | sed -e "s/v//")'
+  - make update-public-repo
+
 deploy:
   provider: releases
   api_key:
@@ -53,10 +57,15 @@ notifications:
 
 env:
   global:
+    - GIT_COMMITTER_NAME=yoheimuta
+    - GIT_COMMITTER_EMAIL=yoheimuta@gmail.com
+    - GIT_AUTHOR_NAME=yoheimtua
+    - GIT_AUTHOR_EMAIL=yoheimuta@gmail.com
+    # to push public repository
+    - secure: PJWcPIV4VmKGqyKuHpzCCoZBDpwCjfXURgzHarzE9mfTMGCIXmQQKERdJsFsgjHABLirKTFOHRfFBUTv/VjOscDcy4oBnY4pHi6H9YzYMqzTI8jYKhXLg502xRDAxsv32NHJBYo1YXXLKvg+g2TE5JgR3d/ment5pZzKOOcCZKs=
     # to decode p12
     - secure: fArJhMTQ9NcJb6+t2YsloRxFQdtF5rxLI1WVlt4ffvFTNAokg19IVov5HZP1i4/THexEWqzhwaAV8X+XZyHc9pqNUutbmeDMChih4m/hbUAy2N0HfQH0yVg3UZMEHzhOmVUBXf36GCnZkmVu6ggTc2TIs5cemRZrkwvK2/JPY+Y=
     # to access iOS Provisioning Portal
     - secure: R2hDwuXaoNNjlJHxtT8DglIjbXR8TSe6XC2tnzlGy9+hLWTXNxK9G4jp2h8sdwBS5grar8w88zyvLEcAXx8a6i6aaYK5JzAYpF5vh1/56ctwCWPx10wrh3jQkkLvJutDDhTaRzcjELOJjF2qdpuqeKYf8CMjUYgIY5bxbjfZj8c=
     # to deploy to deploygate
     - secure: SdVhwFZ0v1ucWO2/rfnJQIuQK7EM++uXMUs1DLW5WEzd5C9kkNiA84D9L/919omfFSXK3Ea4bAp9O1fRdsy9fXVkQ/ypxLXf5Db57eSmtoIlzo8+RlopRP7etcauXn6Lq9M8yjnA399W65v0jYcfeG4GbPnzQLgBWLy/7+k0OsI=
-

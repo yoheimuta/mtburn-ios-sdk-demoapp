@@ -10,9 +10,11 @@ SECURITY_KEYCHAIN=ios-build.keychain
 SECURITY_KEYCHAIN_PATH=~/Library/Keychains/ios-build.keychain
 SECURITY_APP_PATH=/usr/bin/codesign
 
+PUBLIC_REPO_PATH=/tmp/mtburn-ios-sdk-demoapp-public
+
 release:
-	if [ -z "$(CURRENT_VERSION)" ] ; then exit 1; fi
 	if [ -z "$(NEXT_VERSION)" ] ; then exit 1; fi
+	$(eval CURRENT_VERSION := $(shell echo $$(git for-each-ref --sort=-taggerdate --format="%(tag)" refs/tags | head -n 1 | sed -e "s/v//")))
 	git checkout master
 	sed -i '' -e"s/$(CURRENT_VERSION)/$(NEXT_VERSION)/g" \
 		DemoApp/DemoApp-Info.plist
@@ -100,3 +102,19 @@ archive:
 		-project $(MTB_PROJECT) \
 		-scheme $(MTB_SCHEME) \
 		-configuration Release \
+
+clone-public-repo:
+	@git clone https://$(GH_TOKEN)@github.com/yoheimuta/mtburn-ios-sdk-demoapp-public $(PUBLIC_REPO_PATH) >& /dev/null
+	cp -r ./DemoApp $(PUBLIC_REPO_PATH)/demo/
+	cp -r ./DemoApp.xcodeproj $(PUBLIC_REPO_PATH)/demo/
+	cp -r ./AppDavis.framework $(PUBLIC_REPO_PATH)/
+
+update-public-repo: clone-public-repo
+	$(eval CURRENT_VERSION := $(shell cd $(PUBLIC_REPO_PATH); echo $$(git for-each-ref --sort=-taggerdate --format="%(tag)" refs/tags | head -n 1 | sed -e "s/v//")))
+	@cd $(PUBLIC_REPO_PATH); \
+		appledoc --project-name AppDavis.framework --project-company TEMP --create-html --no-create-docset --output ./docs ./AppDavis.framework/Headers/; \
+		sed -i '' -e"s/$(CURRENT_VERSION)/$(NEXT_VERSION)/g" Dummy.podspec; \
+		git add .; \
+		git commit -m"Updated version to v$(NEXT_VERSION)"; \
+		git tag -a v$(NEXT_VERSION) -m"Updated version to v$(NEXT_VERSION)"; \
+		git push --tags https://$(GH_TOKEN)@github.com/yoheimuta/mtburn-ios-sdk-demoapp-public master >& /dev/null;
