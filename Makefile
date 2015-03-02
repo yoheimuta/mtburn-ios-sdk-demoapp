@@ -21,7 +21,7 @@ release:
 	git add .
 	git commit -m"Updated version to v$(NEXT_VERSION)"
 	git tag -a v$(NEXT_VERSION) -m"Updated version to v$(NEXT_VERSION)"
-	git push -f --tags origin master
+	git push --tags origin master
 
 test:
 	xcodebuild clean test \
