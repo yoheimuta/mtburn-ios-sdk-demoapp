@@ -11,6 +11,7 @@ SECURITY_KEYCHAIN_PATH=~/Library/Keychains/ios-build.keychain
 SECURITY_APP_PATH=/usr/bin/codesign
 
 PUBLIC_REPO_PATH=/tmp/mtburn-ios-sdk-demoapp-public
+PUBLIC_REPO_COPY_PATH=/tmp/mtburn-ios-sdk-demoapp-public_copy
 
 release:
 	if [ -z "$(NEXT_VERSION)" ] ; then exit 1; fi
@@ -119,3 +120,14 @@ update-public-repo: clone-public-repo
 		git commit -m"Updated version to v$(NEXT_VERSION)"; \
 		git tag -a v$(NEXT_VERSION) -m"Updated version to v$(NEXT_VERSION)"; \
 		git push --tags https://$(GH_TOKEN)@github.com/yoheimuta/mtburn-ios-sdk-demoapp-public master >& /dev/null;
+	cp -r $(PUBLIC_REPO_PATH) $(PUBLIC_REPO_COPY_PATH)
+	@cd $(PUBLIC_REPO_PATH); \
+		git co gh-pages; \
+		mkdir -p appledoc; \
+		mv $(PUBLIC_REPO_COPY_PATH)/doc appledoc/$(NEXT_VERSION); \
+		rm -r appledoc/latest; \
+		ln -s appledoc/$(NEXT_VERSION)/html appledoc/latest; \
+		git add appledoc/; \
+		git clean -fdx; \
+		git commit -m"Added appledoc that corresponded to SDK version $(NEXT_VERSION)"; \
+		git push --tags https://$(GH_TOKEN)@github.com/yoheimuta/mtburn-ios-sdk-demoapp-public gh-pages >& /dev/null;
