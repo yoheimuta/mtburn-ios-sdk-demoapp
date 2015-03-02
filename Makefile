@@ -110,6 +110,7 @@ clone-public-repo:
 	cp -r ./AppDavis.framework $(PUBLIC_REPO_PATH)/
 
 update-public-repo: clone-public-repo
+	if [ -z "$(NEXT_VERSION)" ] ; then exit 1; fi
 	$(eval CURRENT_VERSION := $(shell cd $(PUBLIC_REPO_PATH); echo $$(git for-each-ref --sort=-taggerdate --format="%(tag)" refs/tags | head -n 1 | sed -e "s/v//")))
 	@cd $(PUBLIC_REPO_PATH); \
 		appledoc --project-name AppDavis.framework --project-company TEMP --create-html --no-create-docset --output ./docs ./AppDavis.framework/Headers/; \

@@ -33,7 +33,7 @@ after_success:
   - make send-coverage
 
 before_deploy:
-  - 'NEXT_VERSION=$(echo ${TRAVIS_TAG} | sed -e "s/v//")'
+  - 'NEXT_VERSION=$(echo "$TRAVIS_TAG" | sed -e "s/v//")'
   - make update-public-repo
 
 deploy:
