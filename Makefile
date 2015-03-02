@@ -119,12 +119,3 @@ update-public-repo: clone-public-repo
 		git commit -m"Updated version to v$(NEXT_VERSION)"; \
 		git tag -a v$(NEXT_VERSION) -m"Updated version to v$(NEXT_VERSION)"; \
 		git push --tags https://$(GH_TOKEN)@github.com/yoheimuta/mtburn-ios-sdk-demoapp-public master >& /dev/null;
-	@cd $(PUBLIC_REPO_PATH); \
-		git co gh-pages; \
-		mv ./doc appledoc/1.0.10
-		rm appledoc/latest
-		ln -s appledoc/1.0.10/html appledoc/latest
-		git add appledoc/
-		git clean -fdx
-		git commit -m"Added appledoc that corresponded to SDK version 1.0.10" // version は読み替えてください
-		git push origin gh-pages
