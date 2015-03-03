@@ -32,7 +32,17 @@ Allow non-engineers to install master(but not released yet) app on device at any
 2. build ipa
 3. deploy to deploygate of [DemoApp](https://deploygate.com/users/yoheimuta/platforms/ios/apps/com.ADVSurn.DemoApp2)
 4. deploy to [github releases](https://github.com/yoheimuta/mtburn-ios-sdk-demoapp/releases)
+5. clone, update files(framework/demo project/podspec/appledoc), commit, tag and push the [dependent repository](https://github.com/yoheimuta/mtburn-ios-sdk-demoapp-public) on this repository content to upstream.
+6. update gh-pages of the [dependent repository](https://github.com/yoheimuta/mtburn-ios-sdk-demoapp-public). see the [generated document](http://yoheimuta.github.io/mtburn-ios-sdk-demoapp-public/appledoc/latest/index.html).
+7. deploy to [github releases](https://github.com/yoheimuta/mtburn-ios-sdk-demoapp-public/releases) of the [dependent repository](https://github.com/yoheimuta/mtburn-ios-sdk-demoapp-public).
 
 Allow non-engineers to install released app on device at any time.
 
 - Identify the specific app on deploygate using release notes of `5a39f0e`(git-commit-hash) .
+
+### Manual Operation to be required
+
+The only last operation to be left is `pod trunk push` of the dependent repository.
+Because the command of `pod trunk register` try to authenticate per machine, not per user. And the method of authentication is confirmation of email.
+
+If your CI service is not-self-hosted like travis-ci, it's difficult to automate `pod trunk register` and `pod trunk push` on a new machine each time of building.
