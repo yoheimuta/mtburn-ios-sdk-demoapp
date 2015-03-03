@@ -49,6 +49,7 @@ deploy:
     all_branches: true  # https://github.com/travis-ci/travis-ci/issues/1675
 
 after_deploy:
+  - gem install dpl
   - make deploy-public-repo
 
 after_script:
