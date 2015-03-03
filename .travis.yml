@@ -48,6 +48,9 @@ deploy:
     tags: true
     all_branches: true  # https://github.com/travis-ci/travis-ci/issues/1675
 
+after_deploy:
+  - make deploy-public-repo
+
 after_script:
   - make remove-certificates
 

@@ -133,3 +133,7 @@ release-public-repo: update-public-repo
 		git clean -fdx; \
 		git commit -m"Added appledoc that corresponded to SDK version $(NEXT_VERSION)"; \
 		git push https://$(GH_TOKEN)@github.com/yoheimuta/mtburn-ios-sdk-demoapp-public gh-pages >& /dev/null;
+
+deploy-public-repo:
+	@cd $(PUBLIC_REPO_PATH); \
+		dpl --provider=releases --api-key=$(GH_TOKEN) --repo=yoheimuta/mtburn-ios-sdk-demoapp-public --skip_cleanup
