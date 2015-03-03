@@ -35,7 +35,7 @@ after_success:
 before_deploy:
   - 'NEXT_VERSION=$(echo ${TRAVIS_TAG} | sed -e "s/v//")'
   - echo NEXT_VERSION=${NEXT_VERSION}
-  - make update-public-repo NEXT_VERSION=$NEXT_VERSION
+  - make release-public-repo NEXT_VERSION=$NEXT_VERSION
 
 deploy:
   provider: releases
