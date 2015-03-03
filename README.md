@@ -8,25 +8,43 @@
 
 ### Pull Requests
 
+Click a creation of p-r button on the top page of github.
+
+Then, CI starts to automate 3 steps below with CI.
+
 1. test
 2. build ipa
 3. deploy to deploygate of [DemoApp-pr](https://deploygate.com/users/yoheimuta/platforms/ios/apps/com.ADVSurn.DemoApp2-pr)
 
-Allow non-engineers to review developing app on device before merge.
+Allow non-engineers to review developing app on each device before merge.
 
 - Identify the specific app on deploygate using release notes of `39c97f9#7`(git-commit-hash#PR-number) .
 
-### Merge master
+### Merge Master
+
+Click a merge button on the page of github pull request.
+
+Then, CI starts to automate 3 steps below with CI.
 
 1. test
 2. build ipa
 3. deploy to deploygate of [DemoApp-master](https://deploygate.com/users/yoheimuta/platforms/ios/apps/com.ADVSurn.DemoApp2-master)
 
-Allow non-engineers to install master(but not released yet) app on device at any time.
+Allow non-engineers to install master(but not released yet) app on each device at any time.
 
 - Identify the specific app on deploygate using release notes of `5a39f0e`(git-commit-hash) .
 
-### Tag commit
+### Tag Commit
+
+Run a release command at the repository.
+
+```sh
+# ex. version up to 1.0.0
+$ cd ./mtburn-ios-sdk-demoapp
+$ make release NEXT_VERSION=1.0.0
+```
+
+Then, CI starts to automate 7 steps below with CI.
 
 1. test
 2. build ipa
@@ -40,7 +58,9 @@ Allow non-engineers to install released app on device at any time.
 
 - Identify the specific app on deploygate using release notes of `5a39f0e`(git-commit-hash) .
 
-### Manual Operation to be required
+Allow to release other dependent repository without any troublesome manual operations.
+
+### Only Manual Operation to Be Required
 
 The only last operation to be left is `pod trunk push` of the dependent repository.
 Because the command of `pod trunk register` try to authenticate per machine, not per user. And the method of authentication is confirmation of email.
