@@ -38,15 +38,23 @@ before_deploy:
   - make release-public-repo NEXT_VERSION=$NEXT_VERSION
 
 deploy:
-  provider: releases
-  api_key:
-    secure: gvj2V09zMPsHDPhNoQCpP4ouMUqq7mdq7g2l79dRSTOqGh/diJpgRWKCOZdZ5hYibpe0ynDckixS3ZLyPGhsvx7qfCxNcWDpdmtZtSSv7yuoc3PEbV56QtFfaoCCJacHWohKjRd2+hymDs6bxfPQ3WjnaMAbA48CdEY3QQEftpg=
-  file: DemoApp.ipa
-  skip_cleanup: true
-  on:
-    repo: yoheimuta/mtburn-ios-sdk-demoapp
-    tags: true
-    all_branches: true  # https://github.com/travis-ci/travis-ci/issues/1675
+  - provider: releases
+    api_key:
+      secure: gvj2V09zMPsHDPhNoQCpP4ouMUqq7mdq7g2l79dRSTOqGh/diJpgRWKCOZdZ5hYibpe0ynDckixS3ZLyPGhsvx7qfCxNcWDpdmtZtSSv7yuoc3PEbV56QtFfaoCCJacHWohKjRd2+hymDs6bxfPQ3WjnaMAbA48CdEY3QQEftpg=
+    file: DemoApp.ipa
+    skip_cleanup: true
+    on:
+      repo: yoheimuta/mtburn-ios-sdk-demoapp
+      tags: true
+      all_branches: true  # https://github.com/travis-ci/travis-ci/issues/1675
+  - provider: releases
+    api_key:
+      secure: gvj2V09zMPsHDPhNoQCpP4ouMUqq7mdq7g2l79dRSTOqGh/diJpgRWKCOZdZ5hYibpe0ynDckixS3ZLyPGhsvx7qfCxNcWDpdmtZtSSv7yuoc3PEbV56QtFfaoCCJacHWohKjRd2+hymDs6bxfPQ3WjnaMAbA48CdEY3QQEftpg=
+    skip_cleanup: true
+    on:
+      repo: yoheimuta/mtburn-ios-sdk-demoapp-public
+      tags: true
+      all_branches: true
 
 after_script:
   - make remove-certificates
