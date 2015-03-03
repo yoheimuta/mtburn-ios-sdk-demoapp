@@ -111,8 +111,9 @@ clone-public-repo:
 	cp -r ./AppDavis.framework $(PUBLIC_REPO_PATH)/
 
 update-public-repo: clone-public-repo
-	if [ -z "$(NEXT_VERSION)" ] ; then exit 1; fi
 	$(eval CURRENT_VERSION := $(shell cd $(PUBLIC_REPO_PATH); echo $$(git for-each-ref --sort=-taggerdate --format="%(tag)" refs/tags | head -n 1 | sed -e "s/v//")))
+	if [ -z "$(CURRENT_VERSION)" ] ; then exit 1; fi
+	if [ -z "$(NEXT_VERSION)" ] ; then exit 1; fi
 	@cd $(PUBLIC_REPO_PATH); \
 		appledoc --project-name AppDavis.framework --project-company TEMP --create-html --no-create-docset --output ./docs ./AppDavis.framework/Headers/; \
 		sed -i '' -e"s/$(CURRENT_VERSION)/$(NEXT_VERSION)/g" Dummy.podspec; \
@@ -120,14 +121,15 @@ update-public-repo: clone-public-repo
 		git commit -m"Updated version to v$(NEXT_VERSION)"; \
 		git tag -a v$(NEXT_VERSION) -m"Updated version to v$(NEXT_VERSION)"; \
 		git push --tags https://$(GH_TOKEN)@github.com/yoheimuta/mtburn-ios-sdk-demoapp-public master >& /dev/null;
+
+release-public-repo: update-public-repo
 	cp -r $(PUBLIC_REPO_PATH) $(PUBLIC_REPO_COPY_PATH)
 	@cd $(PUBLIC_REPO_PATH); \
-		git co gh-pages; \
-		mkdir -p appledoc; \
-		mv $(PUBLIC_REPO_COPY_PATH)/doc appledoc/$(NEXT_VERSION); \
+		git checkout gh-pages; \
+		mv $(PUBLIC_REPO_COPY_PATH)/docs appledoc/$(NEXT_VERSION); \
 		rm -r appledoc/latest; \
-		ln -s appledoc/$(NEXT_VERSION)/html appledoc/latest; \
+		(cd appledoc && ln -s $(NEXT_VERSION)/html latest); \
 		git add appledoc/; \
 		git clean -fdx; \
 		git commit -m"Added appledoc that corresponded to SDK version $(NEXT_VERSION)"; \
-		git push --tags https://$(GH_TOKEN)@github.com/yoheimuta/mtburn-ios-sdk-demoapp-public gh-pages >& /dev/null;
+		git push https://$(GH_TOKEN)@github.com/yoheimuta/mtburn-ios-sdk-demoapp-public gh-pages >& /dev/null;
