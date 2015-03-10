@@ -62,6 +62,8 @@ Allow to release other dependent repository without any troublesome manual opera
 
 ### Only Manual Operation to Be Required
 
+[Updated] `pod trunk` enabled to use `COCOAPODS_TRUNK_TOKEN`, see [Question to be possible to automate `pod trunk push` with CI service like travisCI](https://github.com/CocoaPods/CocoaPods/issues/3224).
+
 The only last operation to be left is `pod trunk push` of the dependent repository.
 Because the command of `pod trunk register` try to authenticate per machine, not per user. And the method of authentication is confirmation of email.
 
